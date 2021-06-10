@@ -1,0 +1,16 @@
+.banner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        color: deeppink;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,18 @@
+.header {
+
+    & a, & a:hover {
+        text-decoration: none;
+        color: deeppink;
+    }
+
+    &__branch {
+        font-weight: bolder;        
+    }
+
+    &__link {
+        & a:hover {
+            color: deeppink;
+            font-weight: bolder;
+        }
+    }
+}

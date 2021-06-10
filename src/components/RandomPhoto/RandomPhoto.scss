@@ -1,0 +1,17 @@
+.random-photo {
+    &__image {
+        $imgSize: 250px;
+
+        width: $imgSize;
+        height: $imgSize;
+
+        border-radius: 0.5rem;
+        background-color: lightgrey;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+}

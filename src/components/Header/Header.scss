@@ -1,4 +1,5 @@
 .header {
+    height: 3rem;
 
     & a, & a:hover {
         text-decoration: none;
@@ -6,10 +7,17 @@
     }
 
     &__branch {
-        font-weight: bolder;        
+        font-weight: bolder;
     }
 
     &__link {
+        & a:hover {
+            color: deeppink;
+            font-weight: bolder;
+        }
+    }
+
+    &__login {
         & a:hover {
             color: deeppink;
             font-weight: bolder;

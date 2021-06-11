@@ -8,20 +8,20 @@ Header.propTypes = {
 
 function Header() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light header">
-            <div className="header__branch">
-                <Link to="/">KidApp</Link>
-            </div>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
+        <nav className="d-flex justify-content-between align-items-center bg-light header ">
+            <div className="row pl-1">
+                <div className="col header__branch">
+                    <Link to="/">KidApp</Link>
+                </div>
 
-            <div className="collapse navbar-collapse header__link ml-2" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <Link to="/photos">Photos</Link>
-                    </li>
-                </ul>
+                <div className="col header__link">
+                    <Link to="/photos">Photos</Link>
+                </div>
+            </div>
+            <div>
+                <div className="col header__login">
+                    <Link to="/login">Login</Link>
+                </div>
             </div>
         </nav>
     );

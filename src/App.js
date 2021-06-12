@@ -1,11 +1,9 @@
 import productApi from 'api/productApi';
 import Header from 'components/Header';
-import Login from 'features/Auth';
-// import Auth from 'features/Auth';
+import SignIn from 'features/Auth/pages/SignIn';
 import firebase from 'firebase';
 import React, { Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-import { Button } from 'reactstrap';
 import './App.scss';
 import NotFound from './components/NotFound';
 
@@ -52,6 +50,7 @@ function App() {
 
             console.log("Login user: ", user.displayName);
             const token = await user.getIdToken();
+            localStorage.setItem('firebaseui::rememberedAccounts', JSON.stringify(user.providerData))
             console.log("Login user token: ", token);
         });
         return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
@@ -66,7 +65,7 @@ function App() {
                     <Switch>
                         <Redirect exact from="/" to="/photos" />
                         <Route path="/photos" component={Photo} />
-                        <Route path="/login" component={Login} />
+                        <Route path="/signIn" component={SignIn} />
                         <Route component={NotFound} />
                     </Switch>
                 </Router>

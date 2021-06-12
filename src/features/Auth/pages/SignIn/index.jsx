@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 
-Login.propTypes = {
+SignIn.propTypes = {
     
 };
 
@@ -18,7 +18,7 @@ const uiConfig = {
     ],
   };
 
-function Login(props) {
+function SignIn(props) {
     return (
         <div className="d-flex justify-content-center">
             <div>
@@ -30,4 +30,4 @@ function Login(props) {
     );
 }
 
-export default Login;
+export default SignIn;

@@ -20,7 +20,7 @@ function Header() {
             </div>
             <div>
                 <div className="col header__login">
-                    <Link to="/login">Login</Link>
+                    <Link to="/signIn">Sign In</Link>
                 </div>
             </div>
         </nav>
